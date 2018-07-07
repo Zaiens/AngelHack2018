@@ -1,0 +1,9 @@
+.Textbox{
+  width: 50%;
+  background-color: aqua;
+}
+
+.Textbox-input{
+  width: 90%;
+  height: 100px;
+}
