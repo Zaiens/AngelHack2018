@@ -11,9 +11,9 @@ class App extends Component {
       <div className="App">
         <Banner/>
         <div className="App-content">
-          <Pet/>
+          <Pet color= "amarillo"/>
           <Chat />
-          <Pet/>
+          <Pet color= "rojo"/>
         </div>      
       </div>  
     );
