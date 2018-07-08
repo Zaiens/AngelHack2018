@@ -18,29 +18,31 @@ class Review extends Component {
 
   componentWillMount() {
     const { steps } = this.props;
-    const { name, gender, age } = steps;
-
-    this.setState({ name, gender, age });
+    this.setState({ steps });
   }
 
   render() {
-    const { name, gender, age } = this.state;
+    const { steps } = this.state;
     return (
       <div style={{ width: '100%' }}>
         <h3>Summary</h3>
         <table>
           <tbody>
             <tr>
-              <td>Name</td>
-              <td>{name.value}</td>
+              <td>Nombre</td>
+              <td>{steps.name.value}</td>
             </tr>
             <tr>
-              <td>Gender</td>
-              <td>{gender.value}</td>
+              <td>Rut</td>
+              <td>{steps.rut.value}</td>
             </tr>
             <tr>
-              <td>Age</td>
-              <td>{age.value}</td>
+              <td>Genero</td>
+              <td>{steps.gender.value}</td>
+            </tr>
+            <tr>
+              <td>Edad</td>
+              <td>{steps.age.value}</td>
             </tr>
           </tbody>
         </table>
@@ -68,7 +70,7 @@ class Chat extends Component {
           steps={[
             {
               id: '1',
-              message: 'What is your name?',
+              message: '¿Cuál es tu nombre?',
               trigger: 'name',
             },
             {
@@ -78,19 +80,40 @@ class Chat extends Component {
             },
             {
               id: '3',
-              message: 'Hi {previousValue}! What is your gender?',
-              trigger: 'gender',
+              message: 'Hola {previousValue}! Bienvenido a BCI. ¿Cuál es tu rut?',
+              trigger: 'rut',
+            },
+            {
+              id: 'rut',
+              user: true,
+              trigger: '4',
+            },
+            {
+              id: '4',
+              message: '¿Cuál es tu dirección de correo electronico?',
+              trigger: 'email',
+            },
+            {
+              id: 'email',
+              user:true,
+              trigger: 5,
+            },
+            {
+              id: '5',
+              message: '¿Cuál es tu genero?',
+              trigger: 'gender'
             },
             {
               id: 'gender',
               options: [
-                { value: 'male', label: 'Male', trigger: '5' },
-                { value: 'female', label: 'Female', trigger: '5' },
+                { value: 'Masculino', label: 'Masculino', trigger: '6' },
+                { value: 'Femenino', label: 'Femenino', trigger: '6' },
+                { value: 'Otro', label: 'Otro', trigger: '6' },
               ],
             },
             {
-              id: '5',
-              message: 'How old are you?',
+              id: '6',
+              message: '¿Cual es tu edad?',
               trigger: 'age',
             },
             {
@@ -111,7 +134,7 @@ class Chat extends Component {
             },
             {
               id: '7',
-              message: 'Great! Check out your summary',
+              message: 'Listo! Revisa tus respuestas',
               trigger: 'review',
             },
             {
@@ -122,14 +145,14 @@ class Chat extends Component {
             },
             {
               id: 'update',
-              message: 'Would you like to update some field?',
+              message: '¿Esta todo bien?',
               trigger: 'update-question',
             },
             {
               id: 'update-question',
               options: [
-                { value: 'yes', label: 'Yes', trigger: 'update-yes' },
-                { value: 'no', label: 'No', trigger: 'end-message' },
+                { value: 'Si', label: 'Si', trigger: 'end-message' },
+                { value: 'No', label: 'No', trigger: 'update-yes' },
               ],
             },
             {
@@ -162,7 +185,7 @@ class Chat extends Component {
             },
             {
               id: 'end-message',
-              message: 'Thanks! Your data was submitted successfully!',
+              message: 'Hemos enviado los datos!',
               end: true,
             },
           ]}
