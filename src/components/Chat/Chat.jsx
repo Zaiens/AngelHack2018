@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ChatBot from 'react-simple-chatbot';
+import avatarBot from "./cara mono.png"
 
 import './Chat.css'
 
@@ -63,6 +64,7 @@ class Chat extends Component {
         <ChatBot
           hideHeader={true}
           width="100%"
+          botAvatar={avatarBot}
           steps={[
             {
               id: '1',
