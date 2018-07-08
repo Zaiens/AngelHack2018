@@ -1,7 +1,7 @@
 .Pet{
-display: flex;
-justify-items: center;
-align-items: center;
+  display: flex;
+  justify-items: center;
+  align-items: center;
 }
 
 .Pet-img{

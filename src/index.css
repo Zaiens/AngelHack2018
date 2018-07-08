@@ -1,13 +1,14 @@
 *{
   border-width: 1px;
-  border-style: dashed;
+  border-style: none;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: blue;
+  background: radial-gradient(500px at 50% 30%, #0029FF 0%, #0A007C 100%), #0A007C;
+  background-repeat: no-repeat;
 }
 
 #root{

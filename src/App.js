@@ -10,10 +10,10 @@ class App extends Component {
     return (
       <div className="App">
         <Banner/>
-        <div className="App-content">
-          <Pet className="App-pet" color= "amarillo"/>
-          <Chat className="App-chat" />
-          <Pet className="App-pet" color= "rojo"/>
+          <div className="App-content">
+          <div className="App-pet"><Pet color= "amarillo"/></div>  
+          <div className="App-chat"><Chat/></div>  
+          <div className="App-pet"><Pet color= "rojo"/></div>  
         </div>      
       </div>  
     );
