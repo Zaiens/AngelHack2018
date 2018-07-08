@@ -12,10 +12,10 @@ class App extends Component {
         <Banner/>
         <div className="App-content">
           <Pet/>
-          <Chat />
+          <Chat/>
           <Pet/>
-        </div>      
-      </div>  
+        </div>
+      </div>
     );
   }
 }

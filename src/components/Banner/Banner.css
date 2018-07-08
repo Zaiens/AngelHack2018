@@ -1,5 +1,12 @@
+.Banner{
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+}
+
 .Banner-img{
   display: block;
+  overflow: hidden;
   margin-left: auto;
   margin-right: auto;
 }

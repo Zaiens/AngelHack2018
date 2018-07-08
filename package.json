@@ -4,8 +4,10 @@
   "private": true,
   "dependencies": {
     "react": "^16.4.1",
+    "react-chat-ui": "^0.3.2",
     "react-dom": "^16.4.1",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "react-simple-chatbot": "^0.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
