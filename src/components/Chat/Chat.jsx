@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ChatBot from 'react-simple-chatbot';
-import avatarBot from "./cara mono.png"
+import avatarBot from "./cara mono.png";
+
+
 
 import './Chat.css'
 
@@ -65,6 +67,9 @@ class Chat extends Component {
           hideHeader={true}
           width="100%"
           botAvatar={avatarBot}
+          contentStyle={{"background-color": "#DFF7EB"}}
+          bubbleStyle={{"background-color": "white", "color": "black", "font-size": "15px", }}
+          bubbleOptionStyle={{"background-color": "white", "color": "black", "font-size": "15px", "font-family": "verdana"}}
           steps={[
             {
               id: '1',
