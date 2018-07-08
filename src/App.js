@@ -11,11 +11,11 @@ class App extends Component {
       <div className="App">
         <Banner/>
         <div className="App-content">
-          <Pet/>
-          <Chat/>
-          <Pet/>
-        </div>
-      </div>
+          <Pet color= "amarillo"/>
+          <Chat />
+          <Pet color= "rojo"/>
+        </div>      
+      </div>  
     );
   }
 }
